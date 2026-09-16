@@ -30,7 +30,7 @@ nav.scrolled { background:var(--glass); backdrop-filter:blur(20px); -webkit-back
 .nav-cta:hover { color:var(--cream) !important; border-color:var(--cream) !important; background:rgba(242,237,230,0.05); }
 
 /* HERO */
-.hero { position:relative; height:100vh; min-height:700px; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; padding-top:12rem; }
+.hero { position:relative; height:100vh; min-height:700px; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; padding-top:12rem; padding-bottom:0; }
 .hero-bg { position:absolute; inset:0; z-index:0; }
 .hero-bg::before { content:""; position:absolute; inset:0; background:radial-gradient(ellipse 75% 55% at 62% 28%, rgba(148,203,173,0.16) 0%, transparent 65%), linear-gradient(160deg, #091713 0%, #0E0E0E 45%); z-index:1; }
 .hero-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; opacity:0; transition:opacity 1.5s; }
@@ -195,8 +195,6 @@ footer { background:#060606; border-top:0.5px solid rgba(242,237,230,0.07); padd
 /* RESPONSIVE */
 @media (max-width:960px) {
   nav { padding:1rem 1.5rem; }
-
-  .hero-content { padding:5rem 1.5rem 4rem; }
   .section-inner { padding:3.5rem 1.5rem; }
   .metrics-inner { padding:2.5rem 1.5rem; grid-template-columns:1fr 1fr; }
   .metric:nth-child(2)::after { display:none; }
@@ -326,7 +324,6 @@ footer { background:#060606; border-top:0.5px solid rgba(242,237,230,0.07); padd
     .le-yt-wrap { aspect-ratio:16/9; }
     .section-inner { padding:3rem 1.5rem; }
     .metrics-inner { padding:2rem 1.5rem; }
-    .hero-content { padding:5rem 1.5rem 4rem; }
   }
   @media(max-width:600px) {
     .metrics-inner { grid-template-columns:1fr; }
@@ -334,6 +331,12 @@ footer { background:#060606; border-top:0.5px solid rgba(242,237,230,0.07); padd
     .for-grid { grid-template-columns:1fr; }
   }
   .nav-brand { font-family:var(--sans); font-size:0.68rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:rgba(242,237,230,0.68); margin-left:0.75rem; white-space:nowrap; }
+
+  @media(max-width:960px) {
+    .hero { min-height:100svh; padding-top:5rem; }
+    .hero-content { padding:2rem 1.5rem 3rem; }
+    .hero-social-proof { font-size:0.72rem; }
+  }
 </style>
 </head>
 <body>
